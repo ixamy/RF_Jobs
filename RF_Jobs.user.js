@@ -17,20 +17,20 @@
 		cellEight,
 		cellSeven,
 		tableBody = document.getElementsByTagName('tbody')[0],
-		tableLength = tableLength= tableBody.rows.length,
+		tableLength = tableBody.rows.length,
 
 		date = new Date(),
 		currentDate = [date.getUTCFullYear(),
-					   date.getUTCMonth()+1,
- 					   date.getUTCDate()],
+		               date.getUTCMonth()+1,
+ 			       date.getUTCDate()],
 
 		hourUTC = date.getUTCHours() + ':' + date.getUTCMinutes();
 
 	for(var i=0;i<tableLength;i++){
 		var rfFullDate = new Date(tableBody.rows[i].cells[4].innerText),
 			rainforestDate = [rfFullDate.getFullYear(),
-							  rfFullDate.getMonth()+1,
-							  rfFullDate.getDate()]
+					  rfFullDate.getMonth()+1,
+					  rfFullDate.getDate()];
 		if(currentDate.toString() == rainforestDate.toString()){
 			cellEight = tableBody.rows[i].cells[8].innerText;
 			cellSeven = tableBody.rows[i].cells[7].innerText
